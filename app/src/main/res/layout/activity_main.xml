@@ -4,15 +4,194 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/image2"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/textSpeech"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textSpeech"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_margin="42dp"
+        android:layout_marginTop="42dp"
+        android:padding="6dp"
+        app:cardBackgroundColor="@color/cardview_shadow_end_color"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="6dp"
+        app:cardUseCompatPadding="true">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrol">
 
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <LinearLayout
+                    android:id="@+id/linear1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linear3">
+
+
+                    <EditText
+                        android:id="@+id/editText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:ems="10"
+                        android:gravity="center_horizontal"
+                        android:inputType="textPersonName"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linear3"
+                        tools:layout_editor_absoluteX="37dp"
+                        tools:layout_editor_absoluteY="137dp" />
+
+                    <ImageView
+                        android:id="@+id/imageViewlighton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="38dp"
+                        android:contentDescription="light on"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/editText"
+                        app:srcCompat="@drawable/light1" />
+
+
+                    <ImageView
+                        android:id="@+id/imageViewlightoff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="38dp"
+                        android:contentDescription="light off"
+                        android:foregroundGravity="center_horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/editText"
+                        app:srcCompat="@drawable/light2" />
+
+                    <ImageView
+                        android:id="@+id/imageViewfanon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:contentDescription="fan on"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/editText"
+                        app:srcCompat="@drawable/fan1" />
+
+                    <ImageView
+                        android:id="@+id/imageViewfanoff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:contentDescription="fan off"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/editText"
+                        app:srcCompat="@drawable/fan2" />
+
+                    <ImageView
+                        android:id="@+id/imageViewmotorOn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:contentDescription="motor on"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/editText"
+                        app:srcCompat="@drawable/motor1" />
+
+                    <ImageView
+                        android:id="@+id/imageViewmotorOff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:contentDescription="motor off"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/editText"
+                        app:srcCompat="@drawable/motor2" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:orientation="horizontal"
+                    android:padding="0dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linear1">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButton1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ToggleButton"
+                        android:padding="1dp"
+
+                        android:textOff="light off"
+
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/toggleButton2"
+                        app:layout_constraintTop_toBottomOf="@+id/linear12" />
+
+                    <ToggleButton
+                        android:id="@+id/toggleButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ToggleButton"
+
+                        android:textOff="fan off"
+                        android:padding="1dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/toggleButton1"
+                        app:layout_constraintTop_toBottomOf="@+id/linear12" />
+
+                    <ToggleButton
+                        android:id="@+id/toggleButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ToggleButton"
+
+                        android:textOff="Moff"
+                        android:padding="2dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/toggleButton2"
+                        app:layout_constraintTop_toBottomOf="@+id/linear12" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v7.widget.CardView>
 </android.support.constraint.ConstraintLayout>

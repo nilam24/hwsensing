@@ -16,7 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 
-    public static final String BaseUrl="http://192.168.0.7/hwsensingphp/hwsensingphp/";
+    public static final String BaseUrl="http://192.168.0.7/php/";
     //"http://192.168.0.7/bookstore/";  192.168.43.25  http://192.168.0.7/bookstore/docregister.php
     //"http://192.168.0.136/bookstore/";  http://10.0.2.2/
     public static Retrofit retrofit=null;
@@ -46,9 +46,6 @@ public class ApiClient {
         {
             Log.e("",""+e.getMessage());
         }
-
-
-
         Log.e("","++++"+retrofit.toString());
         return retrofit;
     }

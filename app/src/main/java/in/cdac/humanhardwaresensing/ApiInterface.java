@@ -10,7 +10,7 @@ import retrofit2.http.Query;
 public interface ApiInterface {
 
 
-    @GET("userdetail2.php")  //okok login
+    @GET("userdetail3.php")  //okok login
     Call<List<User>> doLogin();
 
 
@@ -48,17 +48,20 @@ public interface ApiInterface {
 //    @GET("testdetailpat.php")
 //    Call<List<Pat>>  getPatResponseList();
 //
-//    @GET("testallocation.php")
-//    Call<List<AllocationPojo>> getAlloc();
+    @GET("userresetpass.php")
+    Call<List<User>> doReset(@Query("user_id")String user_id,
+                             @Query("user_pass")String user_pass);
 
 
    // @FormUrlEncoded
-    @POST("userregister1.php")
+    @GET("user.php")
     Call<User> insertUser(@Query("user_id") String user_id,
                              @Query("user_pass") String user_pass,
                              @Query("user_name") String user_name,
                              @Query("user_contact") String user_contact,
-                             @Query("user_address") String user_address);
+                             @Query("user_city") String user_city,
+                             @Query("user_state")String user_state,
+                             @Query("user_country")String user_country);
 
 
 

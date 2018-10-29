@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ import retrofit2.Response;
 public class LoginActivity extends AppCompatActivity {
 
     EditText editEmail, editPas;
+    TextView textViewreset;
     Button btnlogin, btnregister;
     ApiInterface apiInterface;
     User user;
@@ -30,16 +32,34 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_layout);
+        setContentView(R.layout.login);
 
         editEmail = (EditText) findViewById(R.id.editTextEmail);
         editPas = (EditText) findViewById(R.id.editTextPas);
         btnlogin = (Button) findViewById(R.id.buttonlogin);
         btnregister = (Button) findViewById(R.id.buttonregister);
-
+        textViewreset=(TextView)findViewById(R.id.textviewresetpas);
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
         user = new User();
         userList = new ArrayList<>();
+
+        textViewreset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(LoginActivity.this,Resetactivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        btnregister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(LoginActivity.this,RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override

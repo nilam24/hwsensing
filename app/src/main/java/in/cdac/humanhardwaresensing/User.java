@@ -17,9 +17,15 @@ public class User {
     @SerializedName("user_contact")
     @Expose
     private String userContact;
-    @SerializedName("user_address")
+    @SerializedName("user_city")
     @Expose
-    private String userAddress;
+    private String userCity;
+    @SerializedName("user_state")
+    @Expose
+    private String userState;
+    @SerializedName("user_country")
+    @Expose
+    private String userCountry;
 
     public String getUserId() {
         return userId;
@@ -53,12 +59,28 @@ public class User {
         this.userContact = userContact;
     }
 
-    public String getUserAddress() {
-        return userAddress;
+    public String getUserCity() {
+        return userCity;
     }
 
-    public void setUserAddress(String userAddress) {
-        this.userAddress = userAddress;
+    public void setUserCity(String userCity) {
+        this.userCity = userCity;
+    }
+
+    public String getUserState() {
+        return userState;
+    }
+
+    public void setUserState(String userState) {
+        this.userState = userState;
+    }
+
+    public String getUserCountry() {
+        return userCountry;
+    }
+
+    public void setUserCountry(String userCountry) {
+        this.userCountry = userCountry;
     }
 
 }
